@@ -1,0 +1,5 @@
+print("Giorgi")
+print("kukhianidze")
+print("Kutaisi")
+print(14)
+print(2011)
