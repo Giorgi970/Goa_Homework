@@ -1,15 +1,6 @@
-print("Giorgi")
-print("kukhianidze")
-print("Kutaisi")
-print(14)
-print(2011)
-print(2+2)
-print(4+4)
-print(4-2)
-print(3-2)
-print(2*2)
-print(3*3)
-print(9/3)
-print(12/4)
-        
-
+saxeli=Giorgi
+asaki=1
+feri=lurji
+manqana=bmw
+qalaqi=kutaisi
+print="Me mqvia"+ saxeli +"var"+asaki+"wlis"+"sayvareli feri"+feri+"sayvareli manqana"+manqana+"kalaki"+qalaqi
