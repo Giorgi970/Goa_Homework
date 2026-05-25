@@ -1,2 +1,14 @@
-
-    
+print("shaurma")
+print("fexburti")
+print("manqanebi")
+print("leptopi")
+print("kompiuteri")
+print("xili")
+print("bostneuli")
+print("seirnoba")
+print("tamashi")
+print("simgeris mosmena")
+print("kinos yureba")
+print("kitxva")
+print("vegar vipikreb ocamde")
+print("level 1 shesrulebulia")
