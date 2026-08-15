@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>level27</h1>
+   <!-- 
+  სტილიზაციის (CSS) 3 ძირითადი გზა და განსხვავებები:
+
+  1. Inline CSS (პირდაპირი სტილი):
+     - სტილი იწერება კონკრეტული HTML ელემენტის შიგნით, style ატრიბუტის გამოყენებით.
+     - უპირატესობა: აქვს უმაღლესი პრიორიტეტი (overrides სხვა სტილებს).
+     - ნაკლი: აბინძურებს კოდს, ძნელია მისი მართვა და ცვლილება, არ ვრცელდება სხვა ელემენტებზე.
+     - მაგალითი: <p style="color: red;">ტექსტი</p>
+
+  2. Internal CSS (შიდა სტილი):
+     - სტილი იწერება იმავე HTML ფაილის <head> სექციაში, <style> თეგის შიგნით.
+     - უპირატესობა: კარგია ერთადერთი გვერდის სწრაფად გასტილვისთვის, არ სჭირდება ცალკე ფაილი.
+     - ნაკლი: მოქმედებს მხოლოდ იმ ერთ კონკრეტულ HTML ფაილზე; თუ საიტი მრავალგვერდიანია, სტილის გამეორება მოგიწევთ.
+     - მაგალითი: <style> p { color: blue; } </style>
+
+  3. External CSS (გარე სტილი):
+     - სტილი იწერება ცალკე .css გაფართოების ფაილში და შემდეგ HTML ფაილს უერთდება <link> თეგით <head>-ში.
+     - უპირატესობა: ყველაზე პროფესიონალური და რეკომენდებული მეთოდი. ერთი CSS ფაილით იმართება მთელი საიტის დიზაინი (ათობით ან ასობით გვერდი). კოდი სუფთა და ორგანიზებულია.
+     - ნაკლი: საჭიროებს დამატებითი ფაილის შექმნას და დაკავშირებას.
+     - მაგალითი: <link rel="stylesheet" href="style.css">
+--> 
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Inline CSS მაგალითი</title>
+</head>
+<body style="background-color: #f4f4f9; font-family: Arial, sans-serif; padding: 40px;">
+
+    <h2 style="color: #333; text-align: center;">Inline CSS-ის გამოყენება პარაგრაფებზე</h2>
+
+    <!-- პირველი პარაგრაფი -->
+    <p style="color: #2c3e50; font-size: 18px; background-color: #ffffff; padding: 15px; border-left: 5px solid #3498db; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+        ეს არის პირველი პარაგრაფი, რომელიც გასტილულია უშუალოდ HTML თეგში style ატრიბუტით. გამოყენებულია ფერი, ფონის ფერი, შრიფტის ზომა და ჩარჩო.
+    </p>
+
+    <!-- მეორე პარაგრაფი -->
+    <p style="color: #e74c3c; font-size: 16px; font-weight: bold; background-color: #ffffff; padding: 15px; border-left: 5px solid #e74c3c; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 15px;">
+        ეს არის მეორე პარაგრაფი. ის გამოირჩევა მკვეთრი წითელი ტექსტით და მსხვილი (bold) შრიფტით.
+    </p>
+
+    <!-- მესამე პარაგრაფი -->
+    <p style="color: #27ae60; font-size: 17px; font-style: italic; background-color: #ffffff; padding: 15px; border-left: 5px solid #27ae60; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-top: 15px;">
+        ეს არის მესამე პარაგრაფი. აქ გამოყენებულია მწვანე ფერი და დახრილი (italic) ტექსტის სტილი.
+    </p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Internal CSS მაგალითი</title>
+    <style>
+        /* ზოგადი სტილი გვერდისთვის */
+        body {
+            background-color: #eef2f3;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+        }
+
+        /* Internal CSS სათაურებისთვის (h1) */
+        h1 {
+            color: #ffffff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            letter-spacing: 1px;
+            transition: transform 0.3s ease;
+        }
+
+        /* ჰოვერ ეფექტი სათაურებზე */
+        h1:hover {
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center; color: #444; margin-bottom: 30px;">Internal CSS-ის გამოყენება სათაურებზე (h1)</h2>
+
+    <h1>პირველი მთავარი სათაური</h1>
+    <h1>მეორე მთავარი სათაური</h1>
+    <h1>მესამე მთავარი სათაური</h1>
+    <h1>მეოთხე მთავარი სათაური</h1>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ჩემი პორტფოლიო საიტი</title>
+    <!-- External CSS ფაილის დაკავშირება -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ჰედერი (ნავიგაცია) -->
+    <header>
+        <div class="logo">მოგესალმებით</div>
+        <nav>
+            <a href="#">მთავარი</a>
+            <a href="#">ჩემ შესახებ</a>
+            <a href="#">სერვისები</a>
+            <a href="#">კონტაქტი</a>
+        </nav>
+    </header>
+
+    <!-- მთავარი კონტენტი -->
+    <main>
+        <section class="hero">
+            <h1>გამარჯობა, მე ვარ დამწყები ვებ-დეველოპერი</h1>
+            <p>ეს არის მარტივი და ლამაზი ვებ-საიტი, რომელიც აწყობილია External CSS-ის მეშვეობით. საიტზე გამოყენებულია ფერები, ჩარჩოები, შრიფტები, ფონები და განლაგების ელემენტები.</p>
+            <button class="btn">გაიგე მეტი</button>
+        </section>
+
+        <!-- ბლოკების სექცია -->
+        <section class="cards-container">
+            <div class="card">
+                <h3>HTML5</h3>
+                <p>ვებსაიტების სტრუქტურისა და კარკასის შექმნა თანამედროვე სტანდარტებით.</p>
+            </div>
+            <div class="card">
+                <h3>CSS3</h3>
+                <p>დიზაინი, ფერები, ანიმაციები და ვიზუალური მხარის გალამაზება.</p>
+            </div>
+            <div class="card">
+                <h3>JavaScript</h3>
+                <p>საიტისთვის ინტერაქტიული და დინამიური ფუნქციონალის მინიჭება.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ფუტერი -->
+    <footer>
+        <p>&copy; 2026 ყველა უფლება დაცულია. შექმნილია HTML და CSS-ის გამოყენებით.</p>
+    </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Descendant Selector დავალება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        /* ზოგადი სტილი main div-ისთვის */
+        .main-div {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Descendant Selector: .main-div-ის შიგნით არსებული h1 */
+        .main-div h1 {
+            color: green;
+        }
+
+        /* Descendant Selector: .main-div-ის შიგნით არსებული შიდა დივის (inner-div) შიგნით მდებარე p ტექსტი */
+        .main-div .inner-div p {
+            background-color: yellow;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- მთავარი div -->
+    <div class="main-div">
+        
+        <!-- h1, რომელიც გახდება მწვანე descendant selector-ის წყალობით -->
+        <h1>ეს არის მთავარი სათაური (h1)</h1>
+
+        <!-- ჩვეულებრივი p ტექსტი main div-ში (ფერი არ შეიცვლება) -->
+        <p>ეს არის ჩვეულებრივი პარაგრაფი მთავარი div-ის შიგნით, რომელსაც სტილი არ შეხებია.</p>
+
+        <!-- შიდა div თავისი p ტექსტით -->
+        <div class="inner-div">
+            <!-- p ტექსტი, რომლის ფონიც გახდება ყვითელი -->
+            <p>ეს არის პარაგრაფი შიდა div-ის შიგნით, რომელსაც ექნება ყვითელი ფონი.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Inheritance (მემკვიდრეობითობა) დავალება</title>
+    <style>
+        level29
+        
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        /* მშობელი div, რომელსაც ვუტოვებთ ტექსტის ფერს და შრიფტს */
+        .parent-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            
+            /* სტილები, რომლებიც მემკვიდრეობით გადაეცემა შვილობილ ელემენტებს (p-ს) */
+            color: #2c3e50;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+        }
+
+        /* ღილაკი (button), რომელსაც ვუხსნით მშობლისგან მიღებულ ფერს 
+           და ვუწერთ ინდივიდუალურ ფონსა და ტექსტის ფერს */
+        .parent-box button {
+            background-color: #3498db; /* ღილაკის ახალი ფონი */
+            color: #ffffff;             /* ღილაკის ტექსტის ახალი ფერი */
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            
+            /* შენიშვნა: font-family მემკვიდრეობით მაინც მოჰყვება მშობლისგან, 
+               თუ პირდაპირ არ შევუცვლით, ამიტომ სურვილისამებრ აქვე ვუწერთ შრიფტსაც: */
+            font-family: Arial, sans-serif;
+        }
+
+        .parent-box button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- მშობელი div -->
+    <div class="parent-box">
+        <!-- პარაგრაფი, რომელიც ავტომატურად იღებს მშობლისგან color და font-family სტილებს (მემკვიდრეობითობა) -->
+        <p>ეს არის პარაგრაფი div-ის შიგნით. ის ავტომატურად გაჰყვა მშობლის ფერსა და შრიფტს.</p>
+        
+        <!-- ღილაკი, რომელსაც ინდივიდუალურად შევუცვალეთ ფერები -->
+        <button>დააკლიკე</button>
+    </div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity (სპეციფიკურობა) დავალება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        .box {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 5) Class სელექტორით გაწერილი ფერი (სპეციფიკურობა: 0, 0, 10) */
+        .text-item {
+            color: blue;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* 5) ID სელექტორით გაწერილი ფერი (სპეციფიკურობა: 0, 1, 00) */
+        #special-text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <!-- პირველი პარაგრაფი: აქვს მხოლოდ კლასი, ამიტომ მიიღებს კლასის ფერს (ლურჯს) -->
+        <p class="text-item">ეს არის პირველი პარაგრაფი, რომელსაც აქვს მხოლოდ კლასი (.text-item) და გახდება ლურჯი.</p>
+
+        <!-- მეორე პარაგრაფი: აქვს ორივე (კლასიც და ID-ც). 
+             მიუხედავად იმისა, რომ კლასიც უწერია, ID-ს აქვს უფრო მაღალი პრიორიტეტი, 
+             ამიტომ გახდება წითელი. -->
+        <p class="text-item" id="special-text">ეს არის მეორე პარაგრაფი, რომელსაც აქვს როგორც კლასი, ისე ID. ID-ის მაღალი სპეციფიკურობის გამო ის გახდება წითელი.</p>
+    </div>
+
+    <!-- 
+      კომენტარი: როგორ მუშაობს Specificity (სპეციფიკურობა) ამ შემთხვევაში?
+      
+      - CSS-ში სპეციფიკურობა განსაზღვრავს, თუ რომელი წესი შესრულდება, როდესაც ელემენტზე 
+        რამდენიმე კონფლიქტური სტილია მიმართული.
+      - ID სელექტორს (#) აქვს უფრო მაღალი წონა / სპეციფიკურობა ვიდრე Class სელექტორს (.).
+      - ქულობრივი სისტემით:
+        * ID სელექტორის სპეციფიკურობაა: (0, 1, 0)
+        * Class სელექტორის სპეციფიკურობაა: (0, 0, 1)
+      - შედეგი: მეორე პარაგრაფს მიუხედავად იმისა, რომ უწერია კლასი (.text-item -> ფერი ლურჯი), 
+        ID სელექტორი (#special-text -> ფერი წითელი) აღმოჩნდება უფრო ძლიერი (მაღალი სპეციფიკურობის), 
+        ამიტომ მეორე პარაგრაფი საბოლოოდ იქნება **წითელი**. პირველი პარაგრაფი კი, რომელსაც 
+        მხოლოდ კლასი აქვს, დარჩება **ლურჯი**.
+    -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificity (სპეციფიკურობა) დავალება</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f4f4f9;
+        }
+
+        .box {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 5) Class სელექტორით გაწერილი ფერი (სპეციფიკურობა: 0, 0, 10) */
+        .text-item {
+            color: blue;
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        /* 5) ID სელექტორით გაწერილი ფერი (სპეციფიკურობა: 0, 1, 00) */
+        #special-text {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>level31</h1>
+
+    <div class="box">
+        <!-- პირველი პარაგრაფი: აქვს მხოლოდ კლასი, ამიტომ მიიღებს კლასის ფერს (ლურჯს) -->
+        <p class="text-item">ეს არის პირველი პარაგრაფი, რომელსაც აქვს მხოლოდ კლასი (.text-item) და გახდება ლურჯი.</p>
+
+        <!-- მეორე პარაგრაფი: აქვს ორივე (კლასიც და ID-ც). 
+             მიუხედავად იმისა, რომ კლასიც უწერია, ID-ს აქვს უფრო მაღალი პრიორიტეტი, 
+             ამიტომ გახდება წითელი. -->
+        <p class="text-item" id="special-text">ეს არის მეორე პარაგრაფი, რომელსაც აქვს როგორც კლასი, ისე ID. ID-ის მაღალი სპეციფიკურობის გამო ის გახდება წითელი.</p>
+    </div>
+
+    <!-- 
+      კომენტარი: როგორ მუშაობს Specificity (სპეციფიკურობა) ამ შემთხვევაში?
+      
+      - CSS-ში სპეციფიკურობა განსაზღვრავს, თუ რომელი წესი შესრულდება, როდესაც ელემენტზე 
+        რამდენიმე კონფლიქტური სტილია მიმართული.
+      - ID სელექტორს (#) აქვს უფრო მაღალი წონა / სპეციფიკურობა ვიდრე Class სელექტორს (.).
+      - ქულობრივი სისტემით:
+        * ID სელექტორის სპეციფიკურობაა: (0, 1, 0)
+        * Class სელექტორის სპეციფიკურობაა: (0, 0, 1)
+      - შედეგი: მეორე პარაგრაფს მიუხედავად იმისა, რომ უწერია კლასი (.text-item -> ფერი ლურჯი), 
+        ID სელექტორი (#special-text -> ფერი წითელი) აღმოჩნდება უფრო ძლიერი (მაღალი სპეციფიკურობის), 
+        ამიტომ მეორე პარაგრაფი საბოლოოდ იქნება **წითელი**. პირველი პარაგრაფი კი, რომელსაც 
+        მხოლოდ კლასი აქვს, დარჩება **ლურჯი**.
+    -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>სპორტული სამყარო - სიახლეები და პროდუქცია</title>
+    
+    <!-- Google Fonts (Montserrat შრიფტი) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External CSS კავშირი -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>level32</h1>
+
+    <!-- საიტის მთავარი ჰედერი -->
+    <header>
+        <div class="header-container">
+            <h1>სპორტული სამყარო</h1>
+            <p>თქვენი სანდო გზამკვლევი სპორტის, პროდუქციისა და ჩემპიონატების სამყაროში</p>
+        </div>
+    </header>
+
+    <!-- ნავიგაციის მენიუ -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#main-content">მთავარი</a></li>
+            <li class="dropdown-parent">
+                <a href="#products">პროდუქტი ▼</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">სავარჯიშო მასალები</a></li>
+                    <li><a href="#">ჩაფხუტები</a></li>
+                    <li><a href="#">სპორტული ფეხსაცმელი</a></li>
+                </ul>
+            </li>
+            <li><a href="#events">ღონისძიებები</a></li>
+            <li><a href="#news">სიახლეები</a></li>
+        </ul>
+    </nav>
+
+    <!-- მთავარი კონტენტი -->
+    <main id="main-content">
+        
+        <!-- სიახლეების სექცია -->
+        <section id="news" class="content-section">
+            <h2>უახლესი სპორტული სიახლეები</h2>
+            <p>გაიგეთ ყოველდღიური მიმზიდველი სიახლეები მსოფლიო ჩემპიონატებიდან, სპორტსმენთა მიღწევებიდან და პროფესიონალური ტურნირებიდან.</p>
+        </section>
+
+        <!-- პროდუქტების მთავარი სექცია და სპორტის სახეობები -->
+        <section id="products" class="content-section">
+            <h2>სპორტული პროდუქცია და აღჭურვილობა</h2>
+            <p>შეარჩიეთ საუკეთესო ხარისხის ინვენტარი თქვენი რეგულარული ვარჯიშისა და აქტიური ცხოვრებისთვის.</p>
+
+            <!-- ინდივიდუალური სექციები სპორტის სახეობებისთვის -->
+            <div class="sports-grid">
+                
+                <div class="sport-card football-card">
+                    <h3>ფეხბურთი</h3>
+                    <p>პროფესიონალური ბურთები, ბუცები და უმაღლესი ხარისხის სავარჯიშო ეკიპირება გუნდური და ინდივიდუალური ვარჯიშებისთვის.</p>
+                </div>
+
+                <div class="sport-card basketball-card">
+                    <h3>კალათბურთი</h3>
+                    <p>დახვეწილი დიზაინის კალათბურთის ფეხსაცმელი, ფარები და სათამაშო აქსესუარები მაქსიმალური კომფორტისთვის.</p>
+                </div>
+
+                <div class="sport-card wrestling-card">
+                    <h3>ჭიდაობა</h3>
+                    <p>სპეციალიზებული მატები, დამცავი ჩაფხუტები და ძლიერი სავარჯიშო მასალები უსაფრთხო და პროდუქტიული ვარჯიშისთვის.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ღონისძიებების სექცია -->
+        <section id="events" class="content-section">
+            <h2>მომავალი ღონისძიებები და ჩემპიონატები</h2>
+            <p>ადევნეთ თვალი მსოფლიო მასშტაბის თამაშებს, რეგიონულ ტურნირებს და დაგეგმილ სპორტულ აქტივობებს ჩვენს პლატფორმაზე.</p>
+        </section>
+
+    </main>
+
+    <!-- საიტის ფუტერი -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3>საკონტაქტო ინფორმაცია</h3>
+                <p>ელ-ფოსტა: info@sportworld.ge</p>
+                <p>ტელეფონი: +995 (32) 200 11 22</p>
+                <p>მისამართი: სპორტის გამზირი #12, თბილისი</p>
+            </div>
+            
+            <div class="footer-box">
+                <h3>სოციალური მედია</h3>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">YouTube</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 სპორტული სამყარო. ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>
