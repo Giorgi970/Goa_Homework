@@ -1,0 +1,14 @@
+.photo{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6JflhLt3OTMuj4lgMYV3mgyEI8dsMo4ver16AohHmnUfcHaw-ksbEZgk&s=10);
+    width: 1100px;
+    height: 500px;
+    background-position: center;
+    background-size: contain;
+
+}
+.poto{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReg-SqPSVGbu1xP7zGOLKMMuzfDKGbJ5rIBnZQAytcrFiW8ut95c6VTJCZ&s=10);
+    width: 200px;
+    height: 200px;
+    background-repeat: repeat;
+}
