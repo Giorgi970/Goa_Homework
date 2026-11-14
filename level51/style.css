@@ -1,0 +1,52 @@
+/* 
+  რა არის transform და რისთვის გამოიყენება:
+  transform არის CSS თვისება, რომელიც საშუალებას გვაძლევს ვიზუალურად შევცვალოთ 
+  ელემენტის მდებარეობა, ზომა, ფორმა ან მიმართულება ისე, რომ მან არ დაარღვიოს 
+  ან არ შეცვალოს სხვა ელემენტების განლაგება (flow) ვებგვერდზე. 
+  ის ხშირად გამოიყენება ანიმაციებისთვის და ინტერაქტიული ეფექტებისთვის (მაგალითად :hover-ის დროს).
+
+  ძირითადი და ყველაზე ხშირად გამოყენებადი მნიშვნელობები (ფუნქციები):
+  1. translate(x, y) - აადგილებს ელემენტს ჰორიზონტალურ (X) და ვერტიკალურ (Y) ღერძებზე.
+  2. scale(x, y) - ცვლის (ზრდის ან აპატარაებს) ელემენტის მასშტაბს.
+  3. rotate(angle) - ატრიალებს ელემენტს მითითებული გრადუსით (მაგ: deg).
+  4. skew(x-angle, y-angle) - ხრის ან ამრუდებს ელემენტს X და Y ღერძების მიმართ.
+  5. matrix(n, n, n, n, n, n) - აერთიანებს ყველა 2D ტრანსფორმაციის ფუნქციას ერთში.
+  6. perspective() - ანიჭებს ელემენტს 3D სივრცის ეფექტს.
+*/
+
+.box {
+  width: 120px;
+  height: 120px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+
+  transition: transform 0.4s ease-in-out;
+}
+
+
+.box1:hover {
+  transform: translate(200px, 150px);
+}
+
+
+.box2:hover {
+  transform: scale(2.5);
+}
+
+
+.box3:hover {
+  transform: skew(30deg, 45deg);
+}
+
+
+.box4:hover {
+  transform: rotate(125deg);
+}
